@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Lost & Found</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lostfound.html">Lost & Found</a>
+    </nav>
+</header>
+
+<main>
+
+<section>
+    <h2>Report an Item</h2>
+
+    <input type="text" id="itemName" placeholder="Item name">
+    <textarea id="itemDesc" placeholder="Description"></textarea>
+    <button onclick="addItem()">Submit</button>
+</section>
+
+<section>
+    <h2>Reported Items</h2>
+    <ul id="itemList"></ul>
+</section>
+
+</main>
+
+<script>
+function addItem() {
+    let name = document.getElementById("itemName").value;
+    let desc = document.getElementById("itemDesc").value;
+
+    if(name === "" || desc === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let list = document.getElementById("itemList");
+
+    let li = document.createElement("li");
+    li.innerHTML = "<strong>" + name + "</strong>: " + desc;
+
+    list.appendChild(li);
+
+    document.getElementById("itemName").value = "";
+    document.getElementById("itemDesc").value = "";
+}
+</script>
+
+</body>
+</html>
