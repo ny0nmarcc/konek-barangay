@@ -92,3 +92,17 @@ footer {
     background: #0038A8;
     color: white;
 }
+
+/* ===== ANNOUNCEMENT MODULE ===== */
+
+.announcement-card {
+    background: white;
+    border-left: 6px solid #FCD116; /* YELLOW */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.announcement-card:hover {
+    transform: translateX(8px);
+}
